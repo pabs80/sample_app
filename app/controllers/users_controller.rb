@@ -43,6 +43,7 @@ before_action :correct_user,   only: [:edit, :update]
     end  
     
     def signed_in_user
+      store_location
       redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end    
     
